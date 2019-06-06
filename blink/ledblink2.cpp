@@ -17,13 +17,15 @@ int main(void)
   //pull up to high level
   while(1){
     // digitalRead function return the type of the element is set in circuit rn
-    if(digitalRead(buttonPin) == LOW){ //button has pressed down
+    //so if the pin is set to low then is true
+    if(digitalRead(buttonPin) == LOW){
+      //that means that the button has pressed down
       digitalWrite(ledPin, HIGH);
       //led on
       printf("led on...\n");
       }
     else {
-      //button has released
+      //that means the button has released
       digitalWrite(ledPin, LOW);
       printf("...led off\n");
     }
